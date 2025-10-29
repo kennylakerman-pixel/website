@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Tấn Thông - Portfolio Github</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Hồ Tấn Thông</h1>
+            <nav class="nav">
+                <a href="#hero">Giới Thiệu</a>
+                <a href="#projects">Dự Án</a>
+                <a href="#skills">Kỹ Năng</a>
+                <a href="#contact">Liên Hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="greeting">Xin chào, tôi là</p>
+                    <h2 class="name-title">Thông</h2>
+                    <h3 class="tagline">Tôi là Sinh Viên.</h3>
+                    <p class="bio">Tôi đam mê xây dựng các giao diện người dùng trực quan, hiện đại và hoạt động hiệu quả. Chào mừng đến với portfolio của tôi!</p>
+                    <a href="#projects" class="btn primary-btn">Xem Dự Án Của Tôi</a>
+                </div>
+                <div class="hero-image">
+                    <img src="C:\Users\Admin\Desktop\web_portfolio\assets\avatar.jpg" alt="Ảnh cá nhân" class="avatar-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Dự Án</h2>
+
+                <div class="project-card">
+                    <h3>Dự Án Khác 1: Tên Dự Án</h3>
+                    <p>Mô tả ngắn gọn về dự án này và các công nghệ bạn đã sử dụng.</p>
+                    <a href="#" class="project-link">Xem chi tiết</a>
+                </div>
+
+                <div class="project-card pokeapi-project">
+                    <h3>Dự Án: Tra Cứu Pokémon Đơn Giản</h3>
+                    <p>Sử dụng HTML, CSS và **JavaScript thuần (Fetch API)** để lấy và hiển thị dữ liệu Pokémon từ PokéAPI. Dự án này thể hiện kỹ năng làm việc với API bất đồng bộ.</p>
+                    
+                    <div class="poke-fetch-area">
+                        <label for="poke-id">Nhập ID Pokémon (1-1025):</label>
+                        <input type="number" id="poke-id" value="1" min="1" max="1025">
+                        <button id="fetch-poke-btn" type="button" class="btn secondary-btn">Tra Cứu</button>
+                        <button id="random-poke-btn" type="button" class="btn secondary-btn">Ngẫu Nhiên</button>
+                    </div>
+
+                    <div id="pokemon-data" class="pokemon-display">
+                        <p>Đang chờ tra cứu...</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Kỹ Năng</h2>
+                <div class="skill-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript (ES6+)</span>
+                    <span class="skill-tag">Responsive Design</span>
+                    <span class="skill-tag">Git & GitHub</span>
+                    <span class="skill-tag">Bootstrap (Tùy chọn)</span>
+                    </div>
+            </div>
+        </section>
+
+
+        <section id="weather-section" class="weather-section">
+            <div class="container">
+                <h2 class="section-title">Thời Tiết & Tỷ Giá</h2>
+                <div class="weather-card">
+                    <h3>Thời tiết hiện tại tại TP.HCM</h3>
+                    <div id="weather-data">
+                        <p>Đang tải dữ liệu...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="exchange-card" style="flex: 1;">
+            <h3>Tỷ Giá USD/VND (Ngân Hàng)</h3>
+            <div id="exchange-rate-data">
+                <p>Đang tải dữ liệu...</p>
+            </div>
+        </div>
+    </div>
+        </section>
+
+
+        
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Liên Hệ</h2>
+                <p>Bạn có thể liên hệ với tôi qua:</p>
+                <p class="contact-info">Email: **kennylakerman@gmail.com**</p>
+                <p class="contact-info">GitHub: **github.com/kennylakerman-pixel**</p>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 hotanthong. All rights reserved.</p>
+        </div>
+    </footer>
+<script>
+        alert("JavaScript đang chạy!");
+    </script>
+    <script src="C:\Users\Admin\Desktop\web_portfolio\script.js"></script>
+</body>
+</html>

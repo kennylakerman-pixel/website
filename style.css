@@ -1,0 +1,314 @@
+/* ==================================== */
+/* 1. THIẾT LẬP CƠ BẢN (RESET & FONT) */
+/* ==================================== */
+/* Reset CSS cơ bản để đảm bảo giao diện đồng nhất trên các trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Quan trọng: Giúp việc tính toán kích thước dễ hơn */
+}
+
+/* Áp dụng font chữ và màu nền/màu chữ mặc định */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Màu chữ tối (đen) */
+    background-color: #f8f9fa; /* Màu nền sáng nhẹ */
+    scroll-behavior: smooth; /* Cuộn mượt mà khi click vào liên kết neo (anchor link) */
+}
+
+/* Class 'container' để căn giữa nội dung và tạo khoảng cách hai bên */
+.container {
+    max-width: 1200px; /* Chiều rộng tối đa của nội dung */
+    margin: 0 auto; /* Căn giữa */
+    padding: 0 20px; /* Khoảng đệm hai bên */
+}
+
+a {
+    text-decoration: none; /* Bỏ gạch chân mặc định của liên kết */
+    color: inherit; /* Kế thừa màu chữ từ phần tử cha */
+}
+
+/* ==================================== */
+/* 2. HEADER VÀ NAVIGATION */
+/* ==================================== */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Hiệu ứng đổ bóng nhẹ, hiện đại */
+    position: sticky; /* Thanh navigation cố định ở trên cùng */
+    top: 0;
+    z-index: 1000; /* Đảm bảo nó luôn nằm trên các nội dung khác */
+}
+
+.header .container {
+    display: flex; /* Sắp xếp các phần tử (logo và nav) theo hàng ngang */
+    justify-content: space-between; /* Đẩy logo sang trái, nav sang phải */
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700; /* In đậm */
+    color: #007bff; /* Màu chủ đạo: Xanh dương */
+}
+
+.nav a {
+    margin-left: 25px;
+    font-weight: 500;
+    color: #555;
+    transition: color 0.3s; /* Hiệu ứng chuyển màu mượt mà */
+}
+
+.nav a:hover {
+    color: #007bff; /* Thay đổi màu khi di chuột qua */
+}
+
+/* ==================================== */
+/* 3. PHẦN HERO (GIỚI THIỆU) */
+/* ==================================== */
+.hero {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Khoảng cách giữa nội dung và ảnh */
+}
+
+.hero-content {
+    flex: 1; /* Cho phép nội dung chiếm hết không gian còn lại */
+}
+
+.greeting {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.name-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.bio {
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+/* Định kiểu cho nút bấm */
+.btn {
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.primary-btn {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px); /* Hiệu ứng nhấc nhẹ nút */
+}
+
+/* Định kiểu ảnh cá nhân */
+.avatar-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover; /* Đảm bảo ảnh luôn đầy đủ không bị kéo dãn */
+    border-radius: 50%; /* Làm cho ảnh tròn */
+    border: 5px solid #007bff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================================== */
+/* 4. CÁC PHẦN CHUNG */
+/* ==================================== */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ==================================== */
+/* 5. PHẦN DỰ ÁN */
+/* ==================================== */
+.projects {
+    background-color: #f8f9fa;
+}
+
+.project-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Hiệu ứng nhấc nhẹ khi di chuột */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    color: #007bff;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.secondary-btn {
+    background-color: #e9ecef;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.secondary-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Khu vực tra cứu Pokemon */
+.poke-fetch-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#poke-id {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80px;
+    text-align: center;
+}
+
+.pokemon-display {
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    background-color: #f0f8ff;
+    min-height: 100px; /* Giữ chỗ khi chưa có dữ liệu */
+}
+
+/* ==================================== */
+/* 6. PHẦN KỸ NĂNG */
+/* ==================================== */
+.skill-list {
+    text-align: center;
+}
+
+.skill-tag {
+    display: inline-block;
+    background-color: #e9f5ff; /* Nền màu nhẹ */
+    color: #007bff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 8px;
+    font-weight: 500;
+    border: 1px solid #007bff;
+}
+
+
+/* ==================================== */
+/* 7. PHẦN LIÊN HỆ & FOOTER */
+/* ==================================== */
+.contact {
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.footer {
+    background-color: #343a40; /* Màu tối cho footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ==================================== */
+/* 8. MEDIA QUERIES (RESPONSIVE) */
+/* ==================================== */
+/* Dành cho màn hình điện thoại (<= 768px) */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column; /* Chuyển navigation xuống dưới logo */
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+    
+    .nav a {
+        margin: 0 10px;
+    }
+
+    .hero .container {
+        flex-direction: column; /* Xếp chồng nội dung và ảnh */
+        text-align: center;
+    }
+
+    .avatar-img {
+        margin-top: 30px;
+    }
+    
+    .name-title {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .poke-fetch-area {
+        flex-direction: column; /* Xếp chồng các phần tử nhập liệu */
+        align-items: stretch;
+    }
+}
