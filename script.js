@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===========================================
-    // 2. TÍNH NĂNG GỌI API - POKÉAPI: KHỞI TẠO BIẾN
+    // 2. TÍNH NĂNG GỌI API - POKÉAPI: KHỞI TẠO BIẾNN
     // ===========================================
     const fetchPokeBtn = document.querySelector('#fetch-poke-btn'); 
     const pokeIdInput = document.querySelector('#poke-id');         
@@ -85,7 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // ... (Đặt hàm này cùng chỗ với hàm fetchPokemonData của bạn)
 
 /**
- * Hàm tạo ID Pokémon ngẫu nhiên từ 1 đến 151
+ * Hàm tạo ID Pokémon ngẫu nhiên từ 1 đến 1025
+ * 
  * Cập nhật input và gọi hàm fetchPokemonData
  */
 function fetchRandomPokemon() {
