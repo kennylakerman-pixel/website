@@ -150,7 +150,7 @@ async function fetchWeatherData() {
         const temp = data.main.temp.toFixed(1);
         const description = data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1);
         const iconCode = data.weather[0].icon;
-        const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+        const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
         weatherDataDisplay.innerHTML = `
             <div style="display: flex; align-items: center; gap: 10px;">
